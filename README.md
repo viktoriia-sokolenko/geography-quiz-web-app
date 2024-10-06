@@ -2,9 +2,9 @@
 
 Submitted by: **Viktoriia Sokolenko**
 
-This web app: **Interactive Geography quiz that allows users to check their answers, navigate through the questions, mark questions as mastered, and shuffle the question pack.**
+This web app: **Interactive geography quiz that allows users to check their answers, navigate through the questions, mark questions as mastered, and shuffle the question pack.**
 
-Time spent: **10** hours spent in total
+Time spent: **12** hours spent in total
 
 ## Required Features
 
@@ -28,14 +28,15 @@ The following **additional** features are implemented:
 * [x] A user can choose whether to display mastered questions or not
 * [x] A user can add or remove cards from the mastered list
 * [x] A user can see how many questions they have mastered and how many questions they have not gone through
+* [x] A pop-up modal lets the user know when they master all the questions and gives options to reset the quiz or display mastered cards
+
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
+https://i.imgur.com/Tlc0NLQ.gifv
 
-<img src='public/assets/Walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-Better-quality gif: https://i.imgur.com/H996NnA.gifv
+GIF created with CAP
 
-GIF created with CAP  
 ## Notes
 
 Describe any challenges encountered while building the app.

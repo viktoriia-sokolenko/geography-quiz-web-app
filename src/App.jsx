@@ -21,7 +21,7 @@ function App() {
     setIsFlipped(false);
     setAnswer("");
     setCorrect("");
-  }
+  };
   const changeCardBackward = () => {
     let newCount = count - 1
     if (newCount < 0) {
@@ -39,10 +39,10 @@ function App() {
     setIsFlipped(false);
     setAnswer("");
     setCorrect("");
-  }
+  };
   const turnCard = () => {
     setIsFlipped(!isFlipped);
-  }
+  };
   const markMastered = () => {
     const currentCard = questions[count];
     const updatedQuestions = questions.map((card, i) =>
@@ -66,13 +66,12 @@ function App() {
     if (!isChecked) {
       if (masteredQuestions.length === questions.length) {
       setShowModal(true);
-    } else {
+    } else
       if (questions[count].isMastered)
       {changeCard();
       }
-    }
   }
-  }
+  };
   const handleShowMastered = () => {
     console.log("close modal")
     setShowMastered(true);
@@ -101,7 +100,7 @@ function App() {
       setCorrect (false)
       setCurrentStreak (0)
     }
-  }
+  };
   const shuffleCards = () => {
     const shuffledQuestions = [...questions];
     for (let i = shuffledQuestions.length - 1; i > 0; i--) {
@@ -116,7 +115,7 @@ function App() {
       else {
         while (shuffledQuestions[newCount].isMastered){
           newCount = newCount+1
-          if (newCount > questions.length) {
+          if (newCount > (questions.length-1)) {
             newCount = 0
           }
         }
@@ -133,12 +132,12 @@ function App() {
     setLongestStreak(0);
     setMasteredQuestions([]);
     setShowModal(false);
-  }
+  };
   return (
     <div className="App">
       <h1>Geography Quiz</h1>
       <h2>How well do you know geography? Test your knowledge with these 12 questions!</h2>
-      <h4>Instructions: You can click on the card to flip it and see the answer. You can also choose whether questions marked as mastered would be removed from the card pack and not displayed. If you reset the quiz, all your proggress is deleted. Good luck!</h4>
+      <h4>Instructions: You can click on the card to flip it and see the answer. You can also choose whether questions marked as mastered would be removed from the card pack and not displayed. If you reset the quiz, all your progress is deleted. Good luck!</h4>
       <h3>Questions total: {questions.length} Questions mastered: {masteredQuestions.length} Questions left: {questions.length - count} </h3>
       <h3>Current streak: {currentStreak} Longest streak: {longestStreak} </h3>
       {!showModal && (

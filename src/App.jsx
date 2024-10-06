@@ -7,8 +7,9 @@ function App() {
   const [count, setCount] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
   const [questions, setQuestions] = useState(questionsJson.questions);
-  const [masteredQuestions, setMasteredQuestions] = useState (0)
-  const [showMastered, setShowMastered] = useState(true);
+  const [masteredQuestions, setMasteredQuestions] = useState ([])
+  const [showMastered, setShowMastered] = useState(false);
+  const [showModal, setShowModal] = useState(false)
   const changeCard = () => {
     let newCount = (count + 1) % questions.length
     if (!showMastered) {
@@ -44,21 +45,39 @@ function App() {
   }
   const markMastered = () => {
     const currentCard = questions[count];
-    if (currentCard.isMastered) {
-      setMasteredQuestions(masteredQuestions-1);
-    } else {
-      setMasteredQuestions(masteredQuestions+1);
-    };
     const updatedQuestions = questions.map((card, i) =>
       i === count ? { ...card, isMastered: !card.isMastered } : card
     );
+    const updatedMastered = updatedQuestions.filter((card) => card.isMastered);
+    setMasteredQuestions (updatedMastered);
     setQuestions(updatedQuestions);
-  
-  };
+    if (!showMastered && !currentCard.isMastered){
+      if (updatedMastered.length === questions.length) {
+      console.log("all mastered")
+      setShowModal(true);
+    } else {
+      changeCard();
+    }
+    }
+    };
   const handleCheckbox = (e) => {
     const isChecked = e.target.checked;
     setShowMastered(isChecked);
+    if (!isChecked) {
+      if (masteredQuestions.length === questions.length) {
+      setShowModal(true);
+    } else {
+      if (questions[count].isMastered)
+      {changeCard();
+      }
+    }
   }
+  }
+  const handleShowMastered = () => {
+    console.log("close modal")
+    setShowMastered(true);
+    setShowModal(false);
+  };
 
   const [answer, setAnswer] = useState ("");
   const [correct, setCorrect] = useState("");
@@ -90,30 +109,40 @@ function App() {
       [shuffledQuestions[i], shuffledQuestions[randomIndex]] = [shuffledQuestions[randomIndex], shuffledQuestions[i]];
     }
     let newCount = count
-    while (shuffledQuestions[newCount].isMastered){
-      newCount = newCount+1
-      if (newCount > questions.length) {
-        newCount = 0
+    if (!showMastered) {
+      if (masteredQuestions.length === questions.length){
+        setShowModal(true);
+      }
+      else {
+        while (shuffledQuestions[newCount].isMastered){
+          newCount = newCount+1
+          if (newCount > questions.length) {
+            newCount = 0
+          }
+        }
       }
     }
     setCount(newCount)
     setQuestions(shuffledQuestions);
   };
   const resetQuiz = () => {
-    setQuestions (questionsJson.questions)
-    setCount (0)
-    setIsFlipped(false)
-    setCurrentStreak(0)
-    setLongestStreak(0)
-    setMasteredQuestions(0)
+    setQuestions (questionsJson.questions);
+    setCount (0);
+    setIsFlipped(false);
+    setCurrentStreak(0);
+    setLongestStreak(0);
+    setMasteredQuestions([]);
+    setShowModal(false);
   }
   return (
     <div className="App">
       <h1>Geography Quiz</h1>
       <h2>How well do you know geography? Test your knowledge with these 12 questions!</h2>
       <h4>Instructions: You can click on the card to flip it and see the answer. You can also choose whether questions marked as mastered would be removed from the card pack and not displayed. If you reset the quiz, all your proggress is deleted. Good luck!</h4>
-      <h3>Questions total: {questions.length} Questions mastered: {masteredQuestions} Questions left: {questions.length - count} </h3>
+      <h3>Questions total: {questions.length} Questions mastered: {masteredQuestions.length} Questions left: {questions.length - count} </h3>
       <h3>Current streak: {currentStreak} Longest streak: {longestStreak} </h3>
+      {!showModal && (
+      <>
       <div className = "Quiz">
         <button onClick = {changeCardBackward}>⭠</button>
         <Card onClick = {turnCard} card={count} isFlipped={isFlipped} questions={questions}/>
@@ -130,6 +159,18 @@ function App() {
         Show mastered cards
       </label>
       </form>
+      </>)
+      }
+      {showModal && (
+        <div className="modal">
+          <h2>All cards have been mastered!</h2>
+          <p>Do you want to reset the quiz or show mastered cards?</p>
+          <button onClick={resetQuiz}>Reset Quiz</button>
+          <button onClick={handleShowMastered}>Show your Mastered Cards</button>
+        </div>
+      )}
+      {!showModal && (
+      <>
       <div className = "Buttons">
         <button onClick={checkAnswer}> {correct === false ? "Check again" : "Submit answer"} </button>
         <button onClick = {markMastered}> {questions[count].isMastered ? "Remove from mastered": "Mastered"} </button>
@@ -138,6 +179,8 @@ function App() {
         <button onClick = {shuffleCards}>Shuffle cards</button>
         <button onClick = {resetQuiz}>Reset Quiz</button>
       </div>
+      </>)
+    }
     </div>
   )
 }

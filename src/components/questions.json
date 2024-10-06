@@ -78,7 +78,7 @@
             "isMastered": false
         },
         {
-            "front": "What is the oldest capital city and what country is it?", 
+            "front": "What is the oldest capital city and in what country is it?", 
             "back": "Damascus, Syria", 
             "difficulty": "High", 
             "image": "/assets/damascus.jpg",

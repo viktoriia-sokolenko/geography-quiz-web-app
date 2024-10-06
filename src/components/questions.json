@@ -1,0 +1,88 @@
+{
+    "questions": [
+        {
+            "front": "In which country are Lake Como and Lake Garda located?", 
+            "back": "Italy", 
+            "difficulty": "Easy", 
+            "image": "/assets/como.jpg",
+            "isMastered": false 
+        },
+        {
+            "front": "What is the highest mountain located in Africa?", 
+            "back": "Mount Kilimanjaro", 
+            "difficulty": "Easy", 
+            "image": "/assets/kilimanjaro.jpg",
+            "isMastered": false 
+        },
+        {
+            "front": "Which country has the most lakes?", 
+            "back": "Canada", 
+            "difficulty": "Easy", 
+            "image": "/assets/lakes.jpg",
+            "isMastered": false
+        },
+        {
+            "front": "What country is made up of more than 7,000 islands?", 
+            "back": "The Philippines", 
+            "difficulty": "Easy", 
+            "image": "/assets/islands.jpg",
+            "isMastered": false 
+        },
+        {
+            "front": "Which country in Asia is called 'Land of the Thunder Dragon'", 
+            "back": "Bhutan", 
+            "difficulty": "Medium", 
+            "image": "/assets/bhutan.jpeg",
+            "isMastered": false
+        },
+        {
+            "front": "What continent spans all four hemispheres?", 
+            "back": "Africa", 
+            "difficulty": "Medium", 
+            "image": "/assets/africa.jpg",
+            "isMastered": false
+        },
+        {
+            "front": "What geographic mountain range got its name from Sanskrit words meaning 'abode of snow?'", 
+            "back": "Himalaya", 
+            "difficulty": "Medium", 
+            "image": "/assets/himalaya.jpg",
+            "isMastered": false
+        },
+        {
+            "front": "Which river forms part of the border between Mexico and the US?", 
+            "back": "Rio Grande", 
+            "difficulty": "Medium", 
+            "image": "/assets/grande.jpg",
+            "isMastered": false
+        },
+        {
+            "front": "In which country is the Great Barrier Reef located?", 
+            "back": "Australia", 
+            "difficulty": "High", 
+            "image": "/assets/reef.jpeg",
+            "isMastered": false
+        },
+        {
+            "front": "What is the capital of Honduras?", 
+            "back": "Tegucigalpa", 
+            "difficulty": "High", 
+            "image": "/assets/tegucigalpa.jpg",
+            "isMastered": false
+        },
+        {
+            "front": "What is the longest river in the UK?", 
+            "back": "The River Severn", 
+            "difficulty": "High", 
+            "image": "/assets/severn.jpg",
+            "isMastered": false
+        },
+        {
+            "front": "What is the oldest capital city and what country is it?", 
+            "back": "Damascus, Syria", 
+            "difficulty": "High", 
+            "image": "/assets/damascus.jpg",
+            "isMastered": false
+        }
+    ]
+}

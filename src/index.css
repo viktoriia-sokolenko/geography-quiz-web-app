@@ -1,0 +1,110 @@
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1766A7;
+  color: white;;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  margin: 5px;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  color: #ca054d;
+  margin: 0.2em;
+}
+h2 {
+  color: #1766A7;
+  margin: 0.2em;
+}
+h3 {
+  margin: 0.3em;
+  color: #ca054d;
+}
+h4 {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+.Card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 55vh;
+  width: 65vh;
+  margin: 20px;
+  border-radius: 8px;
+  img {
+    height: 40vh;
+    width: 55vh;
+  }
+  h4 {
+    padding: 10px;
+    margin: 0px;
+  }
+  p {
+    margin: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 1.3em;
+  }
+}
+.Medium {
+  background-color: #EDAFB8;
+  box-shadow: 0 5px 15px #F4CDD3;
+}
+.High {
+  background-color: #81BDEE;
+  box-shadow: 0 5px 15px #93C6F0;
+}
+.Easy {
+  background-color: #65CDC4;
+  box-shadow: 0 5px 15px #84D7D0;
+}
+.Input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 8px;
+  input {
+    margin-right: 10px;
+  }
+}
+.Buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  button {
+    background-color: #14453D;
+    color: white;
+  }
+}
+.SecondButtons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.Correct {
+  border-color: #44CF6C;
+}
+.Wrong {
+  border-color: red;
+}
+.Quiz {
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  button {
+    background-color: #14453D;
+    color: white;
+  }
+}

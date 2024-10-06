@@ -32,7 +32,7 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+Here's a walkthrough of implemented features:
 https://i.imgur.com/Tlc0NLQ.gifv
 
 GIF created with CAP

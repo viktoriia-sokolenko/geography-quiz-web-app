@@ -32,9 +32,7 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented features: 
-
-https://i.imgur.com/Tlc0NLQ.gifv
+Here's a [walkthrough of implemented features](https://i.imgur.com/Tlc0NLQ.gifv).
 
 <img src='https://i.imgur.com/Tlc0NLQ.gifv' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 

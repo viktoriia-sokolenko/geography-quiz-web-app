@@ -33,6 +33,7 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented features:
+<img src='https://i.imgur.com/Tlc0NLQ.gifv' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 https://i.imgur.com/Tlc0NLQ.gifv
 
 GIF created with CAP

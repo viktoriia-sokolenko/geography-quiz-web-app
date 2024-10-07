@@ -6,41 +6,33 @@ This web app: **Interactive geography quiz that allows users to check their answ
 
 Time spent: **12** hours spent in total
 
-## Required Features
-
-The following **required** functionality is completed:
+## Features
 
 - [x] **The user can enter their guess in a box before seeing the flipside of the card**
-- [x] **Clicking on a submit button shows visual feedback about whether the answer was correct or incorrect**
-- [x] **A back button is displayed on the card and can be used to return to the previous card in a set sequence**
-- [x] **A next button is displayed on the card and can be used to navigate to the next card in a set sequence**
+- [x] **A user's answer may be counted as correct even when it is slightly different from the target answer**
+- [x] **A shuffle button is used to randomize the order of the cards**
+- [x] **A counter displays the user's current and longest streak of correct responses**
+- [x] **A user can mark a card that they have mastered and have it removed from the pool of answers**
+- [x] **A pop-up modal lets the user know when they master all the questions and gives options to reset the quiz or display mastered cards**
 
-The following **optional** features are implemented:
+- [x] A user can choose whether to display mastered questions or not
+- [x] A user can add or remove cards from the mastered list
+- [x] A user can see how many questions they have mastered and how many questions they have not gone through
+- [x] A user can reset their progress in the quiz using the reset button
+- [x] A back button is displayed on the card and can be used to return to the previous card in a set sequence
+- [x] A next button is displayed on the card and can be used to navigate to the next card in a set sequence
 
-- [x] A shuffle button is used to randomize the order of the cards
-- [x] A user's answer may be counted as correct even when it is slightly different from the target answer
-- [x] A counter displays the user's current and longest streak of correct responses
-- [x] A user can mark a card that they have mastered and have it removed from the pool of answers as well as added to a list of mastered cards
-
-The following **additional** features are implemented:
-
-* [x] A user can reset their progress in the quiz using the reset button
-* [x] A user can choose whether to display mastered questions or not
-* [x] A user can add or remove cards from the mastered list
-* [x] A user can see how many questions they have mastered and how many questions they have not gone through
-* [x] A pop-up modal lets the user know when they master all the questions and gives options to reset the quiz or display mastered cards
 
 ## Video Walkthrough
 
-Here's a [walkthrough of implemented features](https://i.imgur.com/Tlc0NLQ.gifv).
+Here's a walkthrough of implemented features:
+<a href = "https://i.imgur.com/Tlc0NLQ.gifv">
 
 <img src='https://i.imgur.com/Tlc0NLQ.gifv' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
+</a>
+
 GIF created with CAP
-
-## Notes
-
-Describe any challenges encountered while building the app.
 
 ## License
 
